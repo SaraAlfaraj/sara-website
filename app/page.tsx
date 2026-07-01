@@ -19,7 +19,7 @@ export default function Home() {
               أفكار تُكتب، ومشاريع تُبنى
             </h1>
             <p className="text-text-muted text-lg leading-relaxed max-w-lg mb-8">
-              التقنية ليست غاية، بل وسيلة لحل مشكلات حقيقية وبناء مستقبل أفضل.
+              التقنية ليست غاية، بل رحلة من التعلم والتجربة وصناعة الحلول.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
