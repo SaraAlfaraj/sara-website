@@ -24,14 +24,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ar_SA",
-    siteName: "سارة",
-    title: "سارة — مساحة معرفية في التقنية",
+    siteName: "سارة الفرج",
+    title: "سارة الفرج — أفكار تُكتب، ومشاريع تُبنى",
     description:
       "مدونة شخصية في التقنية، تطوير الويب، وتجربة المستخدم.",
   },
   twitter: {
     card: "summary",
-    title: "سارة — مساحة معرفية في التقنية",
+    title: "سارة الفرج — أفكار تُكتب، ومشاريع تُبنى",
     description:
       "مدونة شخصية في التقنية، تطوير الويب، وتجربة المستخدم.",
   },
