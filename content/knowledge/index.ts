@@ -2,6 +2,15 @@ import type { Article } from "@/types";
 
 export const articles: Article[] = [
   {
+    slug: "how-to-achieve-goals",
+    title: "كيف نحقق أهدافنا؟",
+    description:
+      "مع بداية كل عام يمتلئ الإنسان بالحماس والخطط، لكن كيف نحدد أهدافنا فعلاً؟ وكيف نسعى لتحقيقها بشكل واقعي ومرن؟",
+    date: "٢٠٢٦/٧/٢",
+    tags: ["تأملات", "إنتاجية"],
+    readingTime: "٦ دقائق",
+  },
+  {
     slug: "why-arabic-tech-writing-matters",
     title: "لماذا أكتب بالعربية عن التقنية؟",
     description:

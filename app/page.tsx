@@ -14,12 +14,12 @@ export default function Home() {
       <section className="relative overflow-hidden border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28 flex items-center gap-10 sm:gap-16">
           <FadeIn className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-primary mb-3">أهلاً وسهلًا</p>
+            <p className="text-sm font-medium text-primary mb-3">أهلاً وسهلًا بك، أنا سارة ويسعدني وجودك هنا</p>
             <h1 className="text-4xl sm:text-5xl font-semibold text-foreground leading-tight mb-6 max-w-xl">
-               أنا سارة.
+              التقنية ليست غاية!
             </h1>
             <p className="text-text-muted text-lg leading-relaxed max-w-lg mb-8">
-              باحثة دكتوراه في علوم الحاسب والذكاء الاصطناعي
+              التقنية ليست غاية، بل وسيلة لحل مشكلات حقيقية وبناء مستقبل أفضل.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -37,8 +37,8 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          {/* Mobile: خلفية مركزية */}
-          <div className="sm:hidden absolute inset-0 flex items-center justify-center pointer-events-none">
+          {/* Mobile: خلفية خلف الأزرار */}
+          <div className="sm:hidden absolute inset-0 flex items-end justify-center pb-10 pointer-events-none">
             <LogoOutline className="w-72 h-auto opacity-35 text-secondary" />
           </div>
 
@@ -80,7 +80,7 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-6 py-16">
           <FadeIn>
             <div className="flex items-center justify-between mb-2">
-              <h2 className="text-xl font-semibold text-foreground">أبحاثي</h2>
+              <h2 className="text-xl font-semibold text-foreground">إسهاماتي البحثية</h2>
               <a
                 href={scholarUrl}
                 target="_blank"

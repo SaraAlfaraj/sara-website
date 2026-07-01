@@ -4,13 +4,16 @@ export type ExperienceItem = {
   period: string;
   description: string;
   current?: boolean;
+  url?: string;
 };
 
 export type AchievementItem = {
   title: string;
+  organization?: string;
   description: string;
   year: string;
   tag?: string;
+  rank?: number;
 };
 
 export type ContactLink = {
