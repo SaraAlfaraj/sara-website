@@ -16,7 +16,7 @@ export default function Home() {
           <FadeIn className="flex-1 min-w-0">
             <p className="text-sm font-medium text-primary mb-3">أهلاً وسهلًا بك، أنا سارة ويسعدني وجودك هنا</p>
             <h1 className="text-4xl sm:text-5xl font-semibold text-foreground leading-tight mb-6 max-w-xl">
-              التقنية ليست غاية!
+              أفكار تُكتب، ومشاريع تُبنى.
             </h1>
             <p className="text-text-muted text-lg leading-relaxed max-w-lg mb-8">
               التقنية ليست غاية، بل وسيلة لحل مشكلات حقيقية وبناء مستقبل أفضل.
