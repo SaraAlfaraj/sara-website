@@ -15,8 +15,8 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28 flex items-center gap-10 sm:gap-16">
           <FadeIn className="flex-1 min-w-0">
             <p className="text-sm font-medium text-primary mb-3">أهلاً وسهلًا بك، أنا سارة ويسعدني وجودك هنا</p>
-            <h1 className="text-4xl sm:text-5xl font-semibold text-foreground leading-tight mb-6 max-w-xl">
-              أفكار تُكتب، ومشاريع تُبنى.
+            <h1 className="text-3xl sm:text-4xl font-semibold text-foreground leading-tight mb-6 max-w-xl">
+              أفكار تُكتب، ومشاريع تُبنى
             </h1>
             <p className="text-text-muted text-lg leading-relaxed max-w-lg mb-8">
               التقنية ليست غاية، بل وسيلة لحل مشكلات حقيقية وبناء مستقبل أفضل.
