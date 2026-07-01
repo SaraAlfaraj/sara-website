@@ -8,9 +8,7 @@ import Logo from "@/components/ui/Logo";
 const navLinks = [
   { href: "/", label: "الرئيسية" },
   { href: "/about", label: "من أنا" },
-  { href: "/experience", label: "الخبرات" },
   { href: "/knowledge", label: "المعرفة" },
-  { href: "/achievements", label: "الإنجازات" },
   { href: "/contact", label: "تواصل" },
 ];
 

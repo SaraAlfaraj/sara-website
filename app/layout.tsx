@@ -15,8 +15,8 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | سارة",
-    default: "سارة — مساحة معرفية في التقنية",
+    template: "%s | سارة الفرج",
+    default: "سارة الفرج - Sara Alfaraj",
   },
   description:
     "مدونة شخصية في التقنية، تطوير الويب، وتجربة المستخدم. أكتب عن ما أتعلمه وأوثّق مسيرتي المهنية.",

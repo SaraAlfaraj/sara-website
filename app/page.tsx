@@ -14,9 +14,9 @@ export default function Home() {
       <section className="relative overflow-hidden border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28 flex items-center gap-10 sm:gap-16">
           <FadeIn className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-primary mb-3">سارة</p>
+            <p className="text-sm font-medium text-primary mb-3">أهلاً وسهلًا</p>
             <h1 className="text-4xl sm:text-5xl font-semibold text-foreground leading-tight mb-6 max-w-xl">
-              أهلا أنا سارة.
+               أنا سارة.
             </h1>
             <p className="text-text-muted text-lg leading-relaxed max-w-lg mb-8">
               باحثة دكتوراه في علوم الحاسب والذكاء الاصطناعي
@@ -37,6 +37,12 @@ export default function Home() {
             </div>
           </FadeIn>
 
+          {/* Mobile: خلفية مركزية */}
+          <div className="sm:hidden absolute inset-0 flex items-center justify-center pointer-events-none">
+            <LogoOutline className="w-72 h-auto opacity-35 text-secondary" />
+          </div>
+
+          {/* Desktop: عمود جانبي */}
           <FadeIn className="hidden sm:block flex-shrink-0 w-64 lg:w-80 opacity-50 text-secondary" delay={0.2}>
             <LogoOutline className="w-full h-auto" />
           </FadeIn>
