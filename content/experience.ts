@@ -2,7 +2,7 @@ import type { ExperienceItem } from "@/types";
 
 export const experience: ExperienceItem[] = [
   {
-    title: "مطور برمجيات وتجربة مستخدم",
+    title: "مطوّر برمجيات وتجربة المستخدم | Senior Software Developer",
     company: "وزارة العدل",
     period: "2020 — حتى الآن",
     description:
@@ -10,14 +10,14 @@ export const experience: ExperienceItem[] = [
     current: true,
   },
   {
-    title: "محاضر ومساعد تعليمي",
+    title: "محاضر أكاديمي | Lecturer",
     company: "جامعة الأمير سطام بن عبدالعزيز",
     period: "2012 — 2019",
     description:
       "تدريس علوم الحاسب وقواعد البيانات، والإشراف على مشاريع التخرج، وإرشاد الطلاب الموهوبين في البرمجة.",
   },
   {
-    title: "مدير تنفيذي",
+    title: "رائد أعمال | Entrepreneur",
     company: "جوان للقرطاسية والتصميم",
     period: "2011 — 2022",
     description:
