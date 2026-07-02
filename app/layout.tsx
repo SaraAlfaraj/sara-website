@@ -25,15 +25,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ar_SA",
     siteName: "سارة الفرج",
-    title: "سارة الفرج — أفكار تُكتب، ومشاريع تُبنى",
-    description:
-      "مدونة شخصية في التقنية، تطوير الويب، وتجربة المستخدم.",
+    title: "سارة الفرج",
+    description: "أفكار تُكتب، ومشاريع تُبنى",
   },
   twitter: {
     card: "summary",
-    title: "سارة الفرج — أفكار تُكتب، ومشاريع تُبنى",
-    description:
-      "مدونة شخصية في التقنية، تطوير الويب، وتجربة المستخدم.",
+    title: "سارة الفرج",
+    description: "أفكار تُكتب، ومشاريع تُبنى",
   },
 };
 
