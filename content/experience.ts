@@ -22,6 +22,6 @@ export const experience: ExperienceItem[] = [
     period: "2011 — 2022",
     description:
       "إدارة متكاملة لمتجر القرطاسية والتصميم، شملت العمليات اليومية وتطوير المنتجات والتسويق وبناء علاقات العملاء.",
-    url: "https://aljawan.net",
+    url: "https://salla.sa/aljawan",
   },
 ];
