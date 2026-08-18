@@ -14,12 +14,12 @@ export default function Home() {
       <section className="relative overflow-hidden border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28 flex items-center gap-10 sm:gap-16">
           <FadeIn className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-primary mb-3">أهلاً وسهلًا بك، أنا سارة ويسعدني وجودك هنا</p>
+            <p className="text-sm font-medium text-primary mb-3">أهلاً أنا سارة</p>
             <h1 className="text-3xl sm:text-4xl font-semibold text-foreground leading-tight mb-6 max-w-xl">
               أفكار تُكتب، ومشاريع تُبنى
             </h1>
             <p className="text-text-muted text-lg leading-relaxed max-w-lg mb-8">
-              التقنية ليست غاية، بل رحلة من التعلم والتجربة وصناعة الحلول.
+              التقنية باب للمعرفة، وميدان للتجربة وصناعة الأثر
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
