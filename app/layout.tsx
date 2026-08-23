@@ -11,7 +11,7 @@ const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   variable: "--font-arabic",
 });
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.saraalfaraj.com";
 
 export const metadata: Metadata = {
   title: {
