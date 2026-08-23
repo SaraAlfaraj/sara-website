@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/experience",
     "/knowledge",
     "/achievements",
+    "/downloads",
     "/contact",
   ].map((path) => ({
     url: `${baseUrl}${path}`,

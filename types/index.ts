@@ -30,3 +30,15 @@ export type Article = {
   tags: string[];
   readingTime: string;
 };
+
+export type DownloadCategory = "سنوية" | "فصلية" | "دراسية";
+
+export type DownloadItem = {
+  id: string;
+  title: string;
+  year: string;
+  description: string;
+  category: DownloadCategory;
+  file: string;
+  fileSize: string;
+};

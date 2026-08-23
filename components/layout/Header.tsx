@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/about", label: "من أنا" },
   { href: "/knowledge", label: "المعرفة" },
   { href: "/projects", label: "المشاريع" },
+  { href: "/downloads", label: "التحميل" },
   { href: "/contact", label: "تواصل" },
 ];
 
