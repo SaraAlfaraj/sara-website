@@ -18,7 +18,7 @@ export default function KnowledgePage() {
         <h1 className="text-3xl font-semibold text-foreground mb-2">المعرفة</h1>
         <div className="w-12 h-0.5 bg-primary mb-4" />
         <p className="text-text-muted text-sm">
-          مقالات وتأملات في التقنية، التعلم، وما بينهما.
+          مقالات وتأملات في التنمية، التقنية، التعلم، وما بينها.
         </p>
       </div>
 
