@@ -1,25 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
+// يسجّل مشاهدة للمقال في الخلفية دون عرض أي رقم للزائر.
+// العدد يظهر فقط في لوحة الإحصاءات الخاصة (/admin/stats).
 export default function ArticleViews({ slug }: { slug: string }) {
-  const [views, setViews] = useState<number | null>(null);
-
   useEffect(() => {
-    fetch(`/api/articles/${slug}/views`, { method: "POST" })
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data) => {
-        if (data) setViews(data.views);
-      })
-      .catch(() => {});
+    fetch(`/api/articles/${slug}/views`, { method: "POST" }).catch(() => {});
   }, [slug]);
 
-  if (views === null) return null;
-
-  return (
-    <>
-      <span>·</span>
-      <span>{views.toLocaleString("ar")} مشاهدة</span>
-    </>
-  );
+  return null;
 }
