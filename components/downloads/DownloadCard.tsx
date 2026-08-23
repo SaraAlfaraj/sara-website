@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Download } from "lucide-react";
+import { Download, Share2, Check } from "lucide-react";
 import type { DownloadItem } from "@/types";
 
 export default function DownloadCard({ item }: { item: DownloadItem }) {
   const [count, setCount] = useState<number | null>(null);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     fetch(`/api/downloads/${item.id}`)
@@ -19,6 +20,27 @@ export default function DownloadCard({ item }: { item: DownloadItem }) {
   function handleDownload() {
     setCount((prev) => (prev ?? 0) + 1);
     fetch(`/api/downloads/${item.id}`, { method: "POST" }).catch(() => {});
+  }
+
+  async function handleShare() {
+    const url = `${window.location.origin}${item.file}`;
+
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: item.title, url });
+      } catch {
+        // تم إلغاء المشاركة من المستخدم — لا حاجة لأي إجراء
+      }
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // نسخ الرابط غير مدعوم في هذا المتصفح
+    }
   }
 
   return (
@@ -43,15 +65,29 @@ export default function DownloadCard({ item }: { item: DownloadItem }) {
           {count !== null ? `${count.toLocaleString("ar")} تحميل` : " "}
           {item.fileSize ? ` · ${item.fileSize}` : ""}
         </span>
-        <a
-          href={item.file}
-          download
-          onClick={handleDownload}
-          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium hover:opacity-90 transition-opacity"
-        >
-          <Download className="w-4 h-4" />
-          تحميل
-        </a>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={handleShare}
+            aria-label="مشاركة"
+            className="flex items-center justify-center w-9 h-9 rounded-lg border border-border text-text-muted hover:border-primary hover:text-primary transition-colors"
+          >
+            {copied ? (
+              <Check className="w-4 h-4" />
+            ) : (
+              <Share2 className="w-4 h-4" />
+            )}
+          </button>
+          <a
+            href={item.file}
+            download
+            onClick={handleDownload}
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium hover:opacity-90 transition-opacity"
+          >
+            <Download className="w-4 h-4" />
+            تحميل
+          </a>
+        </div>
       </div>
     </article>
   );

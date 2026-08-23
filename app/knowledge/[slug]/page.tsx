@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { articles } from "@/content/knowledge";
+import ArticleViews from "@/components/knowledge/ArticleViews";
 
 export const dynamicParams = false;
 
@@ -70,6 +71,7 @@ export default async function ArticlePage(props: {
           <time>{article.date}</time>
           <span>·</span>
           <span>{article.readingTime} قراءة</span>
+          <ArticleViews slug={article.slug} />
         </div>
       </header>
 

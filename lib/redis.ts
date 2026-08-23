@@ -9,15 +9,23 @@ const token =
 
 export const redis = url && token ? new Redis({ url, token }) : null;
 
-const countKey = (id: string) => `downloads:count:${id}`;
-
-export async function getDownloadCount(id: string): Promise<number> {
+async function getCount(key: string): Promise<number> {
   if (!redis) return 0;
-  const count = await redis.get<number>(countKey(id));
+  const count = await redis.get<number>(key);
   return count ?? 0;
 }
 
-export async function incrementDownloadCount(id: string): Promise<number> {
+async function incrementCount(key: string): Promise<number> {
   if (!redis) return 0;
-  return redis.incr(countKey(id));
+  return redis.incr(key);
 }
+
+const downloadKey = (id: string) => `downloads:count:${id}`;
+export const getDownloadCount = (id: string) => getCount(downloadKey(id));
+export const incrementDownloadCount = (id: string) =>
+  incrementCount(downloadKey(id));
+
+const viewKey = (slug: string) => `articles:views:${slug}`;
+export const getArticleViews = (slug: string) => getCount(viewKey(slug));
+export const incrementArticleViews = (slug: string) =>
+  incrementCount(viewKey(slug));
