@@ -1,14 +1,18 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
-export const runtime = "edge";
 export const alt = "سارة — مساحة معرفية في التقنية";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
-  const font = await fetch(
-    "https://fonts.gstatic.com/s/ibmplexsansarabic/v12/Qw3NZRtWPQCuMeSahQXGmMEVnIYLNWqL7KNJTyUETA.woff"
-  ).then((res) => res.arrayBuffer());
+  const [regular, semibold] = await Promise.all([
+    readFile(join(process.cwd(), "assets/fonts/IBMPlexSansArabic-Regular.ttf")),
+    readFile(
+      join(process.cwd(), "assets/fonts/IBMPlexSansArabic-SemiBold.ttf")
+    ),
+  ]);
 
   return new ImageResponse(
     (
@@ -70,7 +74,10 @@ export default async function Image() {
     ),
     {
       ...size,
-      fonts: [{ name: "IBM Plex Sans Arabic", data: font, weight: 400 }],
+      fonts: [
+        { name: "IBM Plex Sans Arabic", data: regular, weight: 400 },
+        { name: "IBM Plex Sans Arabic", data: semibold, weight: 600 },
+      ],
     }
   );
 }
