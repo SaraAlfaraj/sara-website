@@ -31,6 +31,11 @@ export default function DownloadsPage() {
           ))}
         </div>
       )}
+
+      <p className="text-xs text-text-muted text-center mt-10 pt-6 border-t border-border">
+        هذه الملفات متاحة للاستخدام الشخصي فقط، ولا نسمح ببيعها أو
+        استخدامها للأغراض التجارية.
+      </p>
     </section>
   );
 }
