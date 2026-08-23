@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { articles } from "@/content/knowledge";
 import ArticleViews from "@/components/knowledge/ArticleViews";
+import ShareButton from "@/components/ui/ShareButton";
 
 export const dynamicParams = false;
 
@@ -67,11 +68,18 @@ export default async function ArticlePage(props: {
           {article.description}
         </p>
 
-        <div className="flex items-center gap-4 text-xs text-text-muted border-t border-border pt-4">
-          <time>{article.date}</time>
-          <span>·</span>
-          <span>{article.readingTime} قراءة</span>
-          <ArticleViews slug={article.slug} />
+        <div className="flex items-center justify-between gap-4 text-xs text-text-muted border-t border-border pt-4">
+          <div className="flex items-center gap-4">
+            <time>{article.date}</time>
+            <span>·</span>
+            <span>{article.readingTime} قراءة</span>
+            <ArticleViews slug={article.slug} />
+          </div>
+          <ShareButton
+            url={`/knowledge/${article.slug}`}
+            title={article.title}
+            className="flex items-center justify-center w-8 h-8 rounded-lg border border-border text-text-muted hover:border-primary hover:text-primary transition-colors shrink-0"
+          />
         </div>
       </header>
 
