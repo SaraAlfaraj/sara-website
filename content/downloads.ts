@@ -11,4 +11,14 @@ export const downloads: DownloadItem[] = [
     file: "/downloads/agenda-1448h.pdf",
     fileSize: "٣٦ م.ب",
   },
+  {
+    id: "calendar-semester1-1448h",
+    title: "تقويم الفصل الدراسي الأول",
+    year: "١٤٤٨هـ",
+    description:
+      "التقويم الدراسي للفصل الدراسي الأول للعام ١٤٤٨هـ، بأسابيعه الدراسية كاملة بالتواريخ الهجرية والميلادية، إلى جانب الإجازات والمناسبات الرسمية.",
+    category: "فصلية",
+    file: "/downloads/calendar-semester1-1448h.pdf",
+    fileSize: "١.٢ م.ب",
+  },
 ];
