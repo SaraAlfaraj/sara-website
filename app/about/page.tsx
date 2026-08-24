@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { about } from "@/content/about";
 import { experience } from "@/content/experience";
+import { ijazat } from "@/content/ijazat";
 import { achievements } from "@/content/achievements";
-import { Award } from "lucide-react";
+import { Award, ScrollText } from "lucide-react";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/AnimateIn";
 
 export const metadata: Metadata = {
@@ -74,6 +75,50 @@ export default function AboutPage() {
                     <p className="text-sm text-primary mb-2">{item.company}</p>
                   )}
                   <p className="text-sm text-text-muted leading-relaxed">{item.description}</p>
+                </div>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+      </div>
+
+      {/* Ijazat */}
+      <div className="mb-14 pt-14 border-t border-border">
+        <FadeIn>
+          <h2 className="text-sm font-semibold text-foreground uppercase tracking-widest mb-6">
+            الإجازات العلمية
+          </h2>
+        </FadeIn>
+        <StaggerContainer>
+          {ijazat.map((item, i) => (
+            <StaggerItem key={i}>
+              <div className="flex items-start gap-6 border-b border-border py-6 last:border-0">
+                <div className="shrink-0 pt-1">
+                  <ScrollText className="w-5 h-5 text-primary opacity-60" strokeWidth={1.5} />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
+                    <h3 className="text-base font-semibold text-foreground">
+                      {item.title}
+                      {item.file && (
+                        <a
+                          href={item.file}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:opacity-70 transition-opacity"
+                        >
+                          {" "}↗
+                        </a>
+                      )}
+                    </h3>
+                    <span className="shrink-0 text-xs text-text-muted pt-1">{item.date}</span>
+                  </div>
+                  {item.grantor && (
+                    <p className="text-sm text-primary mb-2">{item.grantor}</p>
+                  )}
+                  {item.description && (
+                    <p className="text-sm text-text-muted leading-relaxed">{item.description}</p>
+                  )}
                 </div>
               </div>
             </StaggerItem>

@@ -7,6 +7,14 @@ export type ExperienceItem = {
   url?: string;
 };
 
+export type IjazahItem = {
+  title: string;
+  grantor?: string;
+  date: string;
+  description?: string;
+  file?: string;
+};
+
 export type AchievementItem = {
   title: string;
   organization?: string;
