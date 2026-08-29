@@ -19,6 +19,19 @@ export const articles: Article[] = [
     tags: ["تأملات", "إنتاجية"],
     readingTime: "١٥ دقيقة",
   },
+  {
+    slug: "831573",
+    title: "وماذا بعد الحد؟",
+    description:
+      "قراءة في كلام أهل العلم حول لباس المرأة أمام النساء، وكيف تحوّلت عبارة فقهية إلى ذريعة للتوسع في الكشف.",
+    date: "٢٠٢٦/٨/٢٩",
+    tags: [],
+    readingTime: "١٣ دقيقة",
+    hidden: true,
+  },
 ];
 
-export const allTags = [...new Set(articles.flatMap((a) => a.tags))];
+/** المقالات الظاهرة للعموم (تُستخدم في شبكة المعرفة، الرئيسية، وخريطة الموقع). */
+export const visibleArticles = articles.filter((a) => !a.hidden);
+
+export const allTags = [...new Set(visibleArticles.flatMap((a) => a.tags))];

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { articles } from "@/content/knowledge";
+import { visibleArticles } from "@/content/knowledge";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.saraalfaraj.com";
 
@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "/" ? 1 : 0.8,
   }));
 
-  const articlePages = articles.map((article) => ({
+  const articlePages = visibleArticles.map((article) => ({
     url: `${baseUrl}/knowledge/${article.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,

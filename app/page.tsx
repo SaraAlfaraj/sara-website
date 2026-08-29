@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { articles } from "@/content/knowledge";
+import { visibleArticles } from "@/content/knowledge";
 import { publications, scholarUrl } from "@/content/publications";
 import ArticleCardGrid from "@/components/knowledge/ArticleCardGrid";
 import LogoOutline from "@/components/ui/LogoOutline";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/AnimateIn";
 
-const recentArticles = articles.slice(0, 3);
+const recentArticles = visibleArticles.slice(0, 3);
 
 export default function Home() {
   return (

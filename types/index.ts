@@ -37,6 +37,9 @@ export type Article = {
   date: string;
   tags: string[];
   readingTime: string;
+  /** مقال غير مُدرَج: لا يظهر في شبكة المعرفة أو الرئيسية أو خريطة الموقع،
+   * لكنه يبقى متاحًا لمن يملك الرابط المباشر فقط. */
+  hidden?: boolean;
 };
 
 export type DownloadCategory = "سنوية" | "فصلية" | "دراسية";

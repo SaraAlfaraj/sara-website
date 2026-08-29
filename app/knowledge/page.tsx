@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { articles, allTags } from "@/content/knowledge";
+import { visibleArticles, allTags } from "@/content/knowledge";
 import ArticleCardGrid from "@/components/knowledge/ArticleCardGrid";
 import CategoryFilter from "@/components/knowledge/CategoryFilter";
 
@@ -9,8 +9,8 @@ export default function KnowledgePage() {
   const [activeTag, setActiveTag] = useState<string | null>(null);
 
   const filtered = activeTag
-    ? articles.filter((a) => a.tags.includes(activeTag))
-    : articles;
+    ? visibleArticles.filter((a) => a.tags.includes(activeTag))
+    : visibleArticles;
 
   return (
     <section className="mx-auto max-w-5xl px-6 py-20">

@@ -25,6 +25,7 @@ export async function generateMetadata(props: {
       description: article.description,
       type: "article",
     },
+    ...(article.hidden && { robots: { index: false, follow: false } }),
   };
 }
 
