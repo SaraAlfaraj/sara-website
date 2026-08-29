@@ -57,7 +57,7 @@ export default async function ArticlePage(props: {
             href="/knowledge"
             className="text-sm text-foreground hover:text-primary transition-colors"
           >
-            للانتقال إلى المقالات اضغط <span className="underline">هنا</span>
+            للانتقال إلى قائمة المقالات اضغط <span className="underline">هنا</span>
           </Link>
         </FadeIn>
       </section>
