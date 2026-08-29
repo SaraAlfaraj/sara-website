@@ -20,7 +20,7 @@ export const articles: Article[] = [
     readingTime: "١٥ دقيقة",
   },
   {
-    slug: "831573",
+    slug: "683218",
     title: "وماذا بعد الحد؟",
     description:
       "قراءة في كلام أهل العلم حول لباس المرأة أمام النساء، وكيف تحوّلت عبارة فقهية إلى ذريعة للتوسع في الكشف.",
@@ -35,3 +35,9 @@ export const articles: Article[] = [
 export const visibleArticles = articles.filter((a) => !a.hidden);
 
 export const allTags = [...new Set(visibleArticles.flatMap((a) => a.tags))];
+
+/**
+ * روابط قديمة لمقالات مخفية تغيّر رابطها؛ تبقى هذه الروابط مبنية (بدل 404)
+ * وتعرض رسالة "محتوى مخفي" مع رابط للعودة إلى صفحة المعرفة.
+ */
+export const retiredSlugs = ["831573"];
