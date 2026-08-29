@@ -52,12 +52,12 @@ export default async function ArticlePage(props: {
           <FloatIcon className="mb-5">
             <Link2Off className="w-8 h-8 text-primary" strokeWidth={1.5} />
           </FloatIcon>
-          <h1 className="text-base font-bold text-foreground mb-2">هذا المقال لم يعد متاحًا</h1>
+          <h1 className="text-base font-bold text-primary mb-2">هذا المقال لم يعد متاحًا</h1>
           <Link
             href="/knowledge"
-            className="text-sm text-primary hover:opacity-80 transition-opacity"
+            className="text-sm text-foreground hover:text-primary transition-colors"
           >
-            للانتقال إلى المقالات اضغط هنا
+            للانتقال إلى المقالات اضغط <span className="underline">هنا</span>
           </Link>
         </FadeIn>
       </section>
